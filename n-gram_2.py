@@ -24,9 +24,9 @@ def cal_pro(word_a,word_b,wordlist,length=1,sum=1):
     #计算P(B|A)
     p=0
     if wordlist[word_a]==0:
-        p=(wordlist[word_b]+1)/(sum+length)
+        p=(wordlist[word_b]+1)/(sum+length+1)
     else:
-        p=(wordlist[word_a+word_b]+1)/(wordlist[word_a]+length)
+        p=(wordlist[word_a+word_b]+1)/(wordlist[word_a]+length+1)
     return p
 	
 def foward(line,word_list,wordlist,length,sum,list_prob):
